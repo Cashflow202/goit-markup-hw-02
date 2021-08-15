@@ -6,6 +6,7 @@
 }
 body {
   font-family: "Roboto", sans-serif;
+  color: #757575;
 }
 /* Сброс точек в списках */
 .list {
@@ -89,17 +90,16 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  background-color: var(--hover-color);
 }
 /* Универсальные ховер и фокус кнопок */
 .btn:hover,
 .btn:focus {
+  cursor: pointer;
   background-color: var(--hover-color);
 }
 /* Кнопка Героя */
 .hero-button {
   color: var(--white-text-color);
-  cursor: pointer;
 }
 /* Заголовок преимуществ */
 .benifits-list-item-title {
@@ -195,4 +195,21 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+/* ---------Страница Портфолио---------- */
+/* Заголовок под каждым из проектов в портфолио */
+.portfolio-list-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+}
+/* Основной текст под каждым из проектов в портфолио */
+.portfolio-list-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
 }
