@@ -3,11 +3,14 @@
   --title-color: #212121;
   --main-text-color: #757575;
   --hover-color: #2196f3;
+  --bg-btn-color: #2196f3;
+  --btn-hover-color: #188ce8;
 }
 body {
   font-family: "Roboto", sans-serif;
-  color: #757575;
+  color: var(--main-text-color);
 }
+
 /* Сброс точек в списках */
 .list {
   list-style: none;
@@ -18,7 +21,7 @@ body {
 }
 /* Синяя часть логотипа в хедере */
 .blue-logo-part {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -26,24 +29,37 @@ body {
 }
 /* Тёмная часть доготипа в хедере */
 .header-logo {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 26px;
   line-height: 1.19x;
   letter-spacing: 0.03em;
   color: var(--title-color);
 }
-/* Ссылка лого в хедере */
-.header-link {
+.header-item {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--main-text-color);
+  color: var(--title-color);
+}
+/* Ссылка лого в хедере */
+.header-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--title-color);
 }
 /* Ховер и фокус лого в хедере */
 .header-link:hover,
+/* .header-link:active, */
 .header-link:focus {
   color: var(--hover-color);
+}
+
+.header-list .link.current {
+  color: var(--btn-hover-color);
 }
 /* Ховер и фокус ссылки на электронную почту в хедере */
 .header-mail-link:hover,
@@ -80,30 +96,31 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text-color);
+  background-color: rgb(204, 199, 199);
 }
 /* Кнопка: универсальные параметры */
 .btn {
-  font-weight: bold;
   font-size: 16px;
-  line-height: 1.14;
-  display: flex;
-  align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
-}
-/* Универсальные ховер и фокус кнопок */
-.btn:hover,
-.btn:focus {
   cursor: pointer;
-  background-color: var(--hover-color);
 }
+
 /* Кнопка Героя */
 .hero-button {
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
   color: var(--white-text-color);
+  background-color: var(--bg-btn-color);
+}
+/* Универсальные ховер и фокус кнопок */
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--btn-hover-color);
 }
 /* Заголовок преимуществ */
-.benifits-list-item-title {
-  font-weight: bold;
+.benefit-title {
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -111,8 +128,7 @@ body {
   color: var(--title-color);
 }
 /* Текст преимуществ */
-.benefits-list-item-text {
-  font-weight: normal;
+.benefit-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -120,7 +136,7 @@ body {
 }
 /* Заголовок примеров работ */
 .works-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
@@ -129,7 +145,7 @@ body {
 }
 /* Заголовок сотрудников */
 .team-title {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
@@ -137,7 +153,7 @@ body {
   color: var(--title-color);
 }
 /* Имена сотрудников */
-.team-employee-name {
+.employee-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -146,7 +162,7 @@ body {
   color: var(--title-color);
 }
 /* Должности сотрудников */
-.team-employee-position {
+.employee-position {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.18;
@@ -154,60 +170,63 @@ body {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
-/* Ховер и фокус ссылки на адрес на карте в футере */
-.address-map-link:hover,
-.address-map-link:focus {
-  color: var(--hover-color);
+
+/* footer */
+.footer {
+  background-color: rgb(204, 199, 199);
 }
-/* Ховер и фокус ссылки на электронную почту в футере */
-.address-mail-link:hover,
-.address-mail-link:focus {
-  color: var(--hover-color);
-}
-/* Ховер и фокус ссылки на телефон в футере */
-.address-tel-link:hover,
-.address-tel-link:focus {
-  color: var(--hover-color);
-}
+
 /* Ссылка на адрес на карте в футере */
-.address-map-link {
+.address-contacts {
   font-style: normal;
-  font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+/* Ховер и фокус ссылки на адрес на карте в футере */
+.contacts-link:hover,
+.map-link:hover,
+.contacts-link:focus,
+.map-link:focus {
+  color: var(--hover-color);
+}
+
+/* .contacts-link:hover,
+.contacts-link:focus {
+  color: var(--hover-color);
+} */
+
+.map-link {
   color: var(--white-text-color);
 }
-/* Ссылка на электронную почту в футере */
-.address-mail-link {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+.contacts-link {
+  color: var(--main-text-color);
 }
-/* Ссылка на телефон в футере */
-.address-tel-link {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
+
 /* ---------Страница Портфолио---------- */
+
+.filter-btn {
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: var(--btn-hover-color);
+  color: var(--white-text-color);
+}
 /* Заголовок под каждым из проектов в портфолио */
-.portfolio-list-title {
-  font-weight: bold;
+.portfolio-title {
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-color);
 }
 /* Основной текст под каждым из проектов в портфолио */
-.portfolio-list-text {
-  font-weight: normal;
+.portfolio-text {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
