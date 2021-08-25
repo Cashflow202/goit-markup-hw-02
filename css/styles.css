@@ -19,6 +19,7 @@ body {
 .link {
   text-decoration: none;
 }
+
 /* Синяя часть логотипа в хедере */
 .blue-logo-part {
   font-weight: 700;
@@ -29,12 +30,14 @@ body {
 }
 /* Тёмная часть доготипа в хедере */
 .header-logo {
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19x;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--title-color);
 }
+/*  */
 .header-item {
   font-weight: 500;
   font-size: 14px;
@@ -182,26 +185,17 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  color: var(--main-text-color);
 }
 
 /* Ховер и фокус ссылки на адрес на карте в футере */
-.contacts-link:hover,
-.map-link:hover,
-.contacts-link:focus,
-.map-link:focus {
+.address-contacts:hover,
+.address-contacts:focus {
   color: var(--hover-color);
 }
-
-/* .contacts-link:hover,
-.contacts-link:focus {
-  color: var(--hover-color);
-} */
 
 .map-link {
   color: var(--white-text-color);
-}
-.contacts-link {
-  color: var(--main-text-color);
 }
 
 /* ---------Страница Портфолио---------- */
